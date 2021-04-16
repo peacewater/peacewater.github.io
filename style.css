@@ -1,0 +1,307 @@
+/*two colors: ##7db0d2(light) and #0065a7(dark)*/
+
+* {
+        font-family: Montserrat;
+}
+
+header {
+	justify-content: space-between !important;
+	background-color: #0065a7;
+	color: white;
+  padding-bottom: 5vh;
+}
+
+select {
+	margin: 1px;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+	background-color:#ffffff;
+}
+
+table.project-details-table td:nth-child(1) {
+	background-color: #dddddd;
+}
+
+table.project-details-table td:nth-child(2) {
+	background-color: #ffffff;
+}
+
+h1 {
+  width: 100%;
+  padding-left: 5vw;
+}
+
+.project-name-link {
+	color: #0000EE;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.section-title {
+	width: 100%;
+}
+
+.navigation-link {
+	width: auto;
+	text-align: center;
+	margin-top: auto;
+	cursor: pointer;
+	padding: 1vw;
+}
+
+.intro {
+	background-color: #7db0d2;
+	padding-bottom: 5vh;
+  justify-content: space-evenly;
+}
+
+.search {
+	background-color: #ffffff;
+}
+
+.parallax-header {
+  /* The image used */
+  background-image: url("./images/pexels-matthew-barra-812958.jpg");
+  /* Set a specific height */
+  min-height: 20vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search-result {
+	width: 100%;
+}
+
+.project-details-table {
+  width: 70vw;
+  align-self: flex-start;
+}
+
+.schematic {
+  order: 1;
+}
+
+.project-images {
+  order: 3;
+}
+
+.text-field {
+  flex-direction: column;
+}
+
+.filter {
+
+  min-width: 20vw;
+  max-width: 70vw;
+}
+
+.diagram-img {
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+#project-name {
+  text-align: center;
+}
+
+#description-container {
+  background-color: #7db0d2;
+  padding-bottom: 10vh;
+}
+
+#description-wrapper {
+  width: 40vw;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#project-details {
+  background-color: #ffffff;
+  padding: 0 10vh 10vh 10vh;
+  justify-content: flex-start;
+}
+
+#project-implementation {
+  background-color: #7db0d2;
+  padding-bottom: 10vh;
+}
+
+#steps-container {
+  width: 40vw;
+  order: 2;
+}
+
+#resources-container {
+  width: 40vw;
+  order: 4;
+}
+
+#navigation {
+	justify-content: space-between;
+	width: 60%;
+	flex-wrap: wrap;
+}
+
+#search-bar {
+	width: 50%;
+	align-self: center;
+}
+
+#logo {
+	width:100%;
+	height:auto;
+}
+
+#selection-container {
+	padding: 10px;
+	width: 70%;
+  flex-direction: column;
+}
+
+#submit-container {
+	padding: 10px;
+	width: 100%
+}
+
+#search-submit {
+	width: 33%;
+	
+}
+
+#how-to-use {
+	width: 50%;
+}
+
+/* logic for result page */
+
+
+.slideShow {
+  box-shadow: -10px 10px 0px 20px #d2e4ef;
+}
+
+.slide-image {
+	width: 100%;
+	height: auto;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 40vw;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* code for star rating system */
+/* copied from https://codepen.io/hesguru/pen/BaybqXv */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    max-width: 200px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}

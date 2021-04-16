@@ -1,0 +1,132 @@
+<!doctype html>
+<head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <title>Peacewaters Database</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="flex-container">
+		<a href="./index.html">
+			<img id='logo' src="./images/logo_peacewater_mar13.png" >
+		</a>
+		<div id='navigation' class='flex-container'>
+			<!-- navigation bar -->
+			<p id='all-solutions-nav' class='navigation-link'>All Solutions</p>
+			<p id='about-us-nav' class='navigation-link'>About Us</p>
+			<p id='diagrams-nav' class='navigation-link'>Diagrams</p>
+            <p id='documentation-nav' class='navigation-link'>Documentation</p>
+			<p id='resources-nav' class='navigation-link'>Resources</p>
+		</div>
+	</header>
+	<div class="parallax-header"></div>
+	<div class="intro flex-container">
+		<!-- Intro section -->
+		<h1 class="section-title">How to use this site</h1>
+		<p id='how-to-use'>This site contains many different water technology solutions to help with various water issues, such as storing drinking water and cleaning waste/sewer water. To find a solution tailored to your needs, just scroll down to the “Search” section. Type keywords related to your needs into the search bar (e.g., “rainwater”). You can also use the provided filters to narrow your results. Click “Submit search” to bring up relevant solutions. Click on any of the listed names to learn more about the listed solutions.
+			<br><br>To learn more about the team that created this site or contact us, there is an “about us” tab above that will give more information. To browse all posted solutions, follow the “All solutions” tab at the top of the page. To learn more about the lifecycle of water, click “Water Diagrams” tab. If you can’t find what you need here, check out the “Resources” tab for other resources.</p>
+		<video width="320" height="240" controls>
+			<source src="" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div class="search flex-container">
+		<!-- Search section -->
+		<h1 class="section-title">Search</h1>
+		<!--form class='flex-container'-->
+			<input id="search-bar" type="text" placeholder="Search..." name="search">
+			<div id='selection-container' class='flex-container'>
+				<!-- change this top one to a set of checkboxes -->
+				<fieldset id="outcome-filter" class='filter'>
+					<legend>Desired outcomes (select all that apply)</legend>
+					<input type="checkbox" name="desired-outcome" value="cleaner-water">Cleaner water</input><br>
+					<input type="checkbox" name="desired-outcome" value="reduce-pollution">Reduce polution</input><br>
+					<input type="checkbox" name="desired-outcome" value='filtration'>Water/air filtration</input><br>
+					<input type="checkbox" name="desired-outcome" value='trash-burning-reduction'>Reduce open trash burning</input><br>
+					<input type="checkbox" name="desired-outcome" value='recycling-jobs'>Create jobs in recycling</input><br>
+					<input type="checkbox" name="desired-outcome" value='eco-tourism'>Develop ecotourism</input><br>
+					<input type="checkbox" name="desired-outcome" value='increase-awarness'>Increase community awareness</input><br>
+					<input type="checkbox" name="desired-outcome" value='grants/funding'>Access grants/funding</input><br>
+				</fieldset>
+				<select name="budget-filter" id="budget-filter" class='filter'>
+					<option value='' disabled selected hidden>Budget</option>
+					<option value="low">Low</option>
+					<option value='medium'>Medium</option>
+					<option value='high'>High</option>
+					<option value='extreme'>Extreme</option>
+				</select>
+				<select name="tech-filter" id="tech-filter" class='filter'>
+					<option value='' disabled selected hidden>Technical skills required</option>
+					<option value='no-skills'>No special skills required</option>
+					<option value='some-skills'>Some technical skills required</option>
+					<option value='ongoing-skills'>Ongoing technical support required</option>
+					<option value='dedicated-skills'>Dedicated technical staff required</option>
+				</select>
+				<select name="env-filter" id="env-filter" class='filter'>
+					<option value='' disabled selected hidden>Environmental impact</option>
+					<option value='low-impact'>Low impact</option>
+					<option value='hazard-chem'>Hazerdous chemicals involved</option>
+					<option value='harmful-waste'>Harmful waste produced</option>
+					<option value='high-energy'>High energy/resource input</option>
+					<option value='water-impact'>Impacts water quality</option>
+				</select>
+				<select name="climate-filter" id="climate-filter" class='filter'>
+					<option value='' disabled selected hidden>Climate</option>
+					<option value='arid'>Arid</option>
+					<option value='high-elevation'>High elevation</option>
+					<option value='tropical'>Tropical</option>
+					<option value='coastal'>Coastal</option>
+					<option value='flood-prone'>Flood prone</option>
+					<option value='freezing-temps'>Freezing temperatures</option>
+				</select>
+			</div>
+			<div id='submit-container' class='flex-container'>
+				<button id='search-submit' type="button">Submit search</button>
+			</div>
+		<table id='result-table' style='visibility:hidden'> <!--class='flex-container'-->
+			<!-- Search display -->
+			<tbody id='result-container'>
+				<tr id='header'>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Desired Outcomes</th>
+					<th>Budget</th>
+					<th>Technical Support Needed</th>
+					<th>Climate</th>
+				</tr>
+			</tbody>
+		</table>
+		<p id='no-results-message' style='visibility:hidden'>No results; try a new search.</p>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTWFYXLSqcG_CW0BhPH-JaQj6kS2g2lts",
+			authDomain: "peace-waters.firebaseapp.com",
+			projectId: "peace-waters",
+			storageBucket: "peace-waters.appspot.com",
+			messagingSenderId: "392862216409",
+			appId: "1:392862216409:web:d8fa8727e4f1fd98228ec8",
+			measurementId: "G-FVG05FX1XF"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+
+	<script src='./script.js'></script>
+
+</body>

@@ -1,0 +1,156 @@
+<!doctype html>
+<head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <title>Peacewaters Database</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header class="flex-container">
+            <a href="./index.html">
+                    <img id='logo' src="./images/logo_peacewater_mar13.png" >
+            </a>
+            <div id='navigation' class='flex-container'>
+                <!-- navigation bar -->
+            	<p id='all-solutions-nav' class='navigation-link'>All Solutions</p>
+                <p id='about-us-nav' class='navigation-link'>About Us</p>
+                <p id='diagrams-nav' class='navigation-link'>Diagrams</p>
+				<p id='documentation-nav' class='navigation-link'>Documentation</p>
+                <p id='resources-nav' class='navigation-link'>Resources</p>
+			</div>
+        </header>
+	<div id='description-container' class='flex-container'>
+		<h1 id='project-name'></h1>
+		<div class="slideshow-container all-images">
+			<!-- need to add logic to add these in js file -->
+			<!-- div class="mySlides fade">
+				<img src="" class='slide-image'>
+			</div -->
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<div id='description-wrapper' class='flex-container text-field'>
+			<h2>Description:</h2>
+			<p id='project-desciption'>
+
+			</p>
+		</div>
+	</div>
+	<div id='project-details' class='flex-container'>
+		<h1>Project Details</h1>
+		<table class='project-details-table'>
+			<!-- need to add logic to add next row in js -->
+			<tbody>
+				<tr>
+					<td>Cost</td>
+					<td id='cost'></td>
+				</tr>
+				<tr>
+					<td>Technical Requirements</td>
+					<td id='tech-requirements'></td>
+				</tr>
+				<tr>
+					<td>Environmental Impact</td>
+					<td id='env-impact'></td>
+				</tr>
+				<tr>
+					<td>Desired Outcomes</td>
+					<td id='outcomes'></td>
+				</tr>
+				<tr>
+					<td>Climate Types</td>
+					<td id='climate'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id='project-implementation' class='flex-container'>
+		<h1>Implementation</h1>
+		<div class="slideshow-container schematic">
+                        <!-- need to add logic to add these in js file -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+		<div class="slideshow-container project-images">
+                        <!-- need to add logic to add these in js file -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+		<div id='steps-container' class='flex-container text-field'>
+			<h2>Step-by-step instructions:</h2>
+			<p id='steps-instructions'></p>
+		</div>
+		<div id='resources-container' class='flex-container text-field'>
+			<h2>Helpful resources:</h2>
+			<p id='resources'></p>
+		</div>
+
+	</div>
+	<div id='project-review' class='flex-container text-field'>
+		<h2>How effective was this solution?</h2>
+		<div class="rate">
+			<input type="radio" id="star5-utility" name="rate" value="5" />
+			<label for="star5" title="text">5 stars</label>
+			<input type="radio" id="star4-utility" name="rate" value="4" />
+			<label for="star4" title="text">4 stars</label>
+			<input type="radio" id="star3-utility" name="rate" value="3" />
+			<label for="star3" title="text">3 stars</label>
+			<input type="radio" id="star2-utility" name="rate" value="2" />
+			<label for="star2" title="text">2 stars</label>
+			<input type="radio" id="star1-utility" name="rate" value="1" />
+			<label for="star1" title="text">1 star</label>
+		</div>
+		<h2>How was the documentation?</h2>
+		<p>Was it concise? Did you find all the information you needed?</p>
+                <div class="rate">
+                        <input type="radio" id="star5-documentation" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4-documentation" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3-documentation" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2-documentation" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1-documentation" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                </div>
+
+	</div>
+	
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+        <script>
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                var firebaseConfig = {
+                        apiKey: "AIzaSyDTWFYXLSqcG_CW0BhPH-JaQj6kS2g2lts",
+                        authDomain: "peace-waters.firebaseapp.com",
+                        projectId: "peace-waters",
+                        storageBucket: "peace-waters.appspot.com",
+                        messagingSenderId: "392862216409",
+                        appId: "1:392862216409:web:d8fa8727e4f1fd98228ec8",
+                        measurementId: "G-FVG05FX1XF"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+        </script>
+
+        <script src='./script.js'></script>
+
+
+</body>
