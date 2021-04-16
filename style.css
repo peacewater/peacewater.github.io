@@ -48,6 +48,11 @@ h1 {
   padding-left: 5vw;
 }
 
+video {
+  width: 40vw;
+  height: auto;
+}
+
 .project-name-link {
 	color: #0000EE;
 	text-decoration: underline;
