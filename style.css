@@ -147,15 +147,6 @@ video {
   justify-content: flex-start;
 }
 
-#checkbox-container {
-  max-width: 35vw;
-  flex-direction: column;
-}
-
-#dropdown-container {
-  max-width: 35vw;
-  flex-direction: column;
-}
 
 #project-details {
   background-color: #ffffff;
@@ -198,6 +189,16 @@ video {
 	padding: 10px;
 	width: 70%;
   /* flex-direction: column; */
+}
+
+#checkbox-container {
+  max-width: 35vw;
+  flex-direction: column;
+}
+
+#dropdown-container {
+  max-width: 35vw;
+  flex-direction: column;
 }
 
 #submit-container {
