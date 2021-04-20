@@ -38,48 +38,52 @@
 			<input id="search-bar" type="text" placeholder="Search..." name="search">
 			<div id='selection-container' class='flex-container'>
 				<!-- change this top one to a set of checkboxes -->
-				<fieldset id="outcome-filter" class='filter'>
-					<legend>Desired outcomes (select all that apply)</legend>
-					<input type="checkbox" name="desired-outcome" value="cleaner-water">Cleaner water</input><br>
-					<input type="checkbox" name="desired-outcome" value="reduce-pollution">Reduce polution</input><br>
-					<input type="checkbox" name="desired-outcome" value='filtration'>Water/air filtration</input><br>
-					<input type="checkbox" name="desired-outcome" value='trash-burning-reduction'>Reduce open trash burning</input><br>
-					<input type="checkbox" name="desired-outcome" value='recycling-jobs'>Create jobs in recycling</input><br>
-					<input type="checkbox" name="desired-outcome" value='eco-tourism'>Develop ecotourism</input><br>
-					<input type="checkbox" name="desired-outcome" value='increase-awarness'>Increase community awareness</input><br>
-					<input type="checkbox" name="desired-outcome" value='grants/funding'>Access grants/funding</input><br>
-				</fieldset>
-				<select name="budget-filter" id="budget-filter" class='filter'>
-					<option value='' disabled selected hidden>Budget</option>
-					<option value="low">Low</option>
-					<option value='medium'>Medium</option>
-					<option value='high'>High</option>
-					<option value='extreme'>Extreme</option>
-				</select>
-				<select name="tech-filter" id="tech-filter" class='filter'>
-					<option value='' disabled selected hidden>Technical skills required</option>
-					<option value='no-skills'>No special skills required</option>
-					<option value='some-skills'>Some technical skills required</option>
-					<option value='ongoing-skills'>Ongoing technical support required</option>
-					<option value='dedicated-skills'>Dedicated technical staff required</option>
-				</select>
-				<select name="env-filter" id="env-filter" class='filter'>
-					<option value='' disabled selected hidden>Environmental impact</option>
-					<option value='low-impact'>Low impact</option>
-					<option value='hazard-chem'>Hazerdous chemicals involved</option>
-					<option value='harmful-waste'>Harmful waste produced</option>
-					<option value='high-energy'>High energy/resource input</option>
-					<option value='water-impact'>Impacts water quality</option>
-				</select>
-				<select name="climate-filter" id="climate-filter" class='filter'>
-					<option value='' disabled selected hidden>Climate</option>
-					<option value='arid'>Arid</option>
-					<option value='high-elevation'>High elevation</option>
-					<option value='tropical'>Tropical</option>
-					<option value='coastal'>Coastal</option>
-					<option value='flood-prone'>Flood prone</option>
-					<option value='freezing-temps'>Freezing temperatures</option>
-				</select>
+				<div id='checkbox-container' class='flex-container'>
+					<fieldset id="outcome-filter" class='filter'>
+						<legend>Desired outcomes (select all that apply)</legend>
+						<input type="checkbox" name="desired-outcome" value="cleaner-water">Cleaner water</input><br>
+						<input type="checkbox" name="desired-outcome" value="reduce-pollution">Reduce polution</input><br>
+						<input type="checkbox" name="desired-outcome" value='filtration'>Water/air filtration</input><br>
+						<input type="checkbox" name="desired-outcome" value='trash-burning-reduction'>Reduce open trash burning</input><br>
+						<input type="checkbox" name="desired-outcome" value='recycling-jobs'>Create jobs in recycling</input><br>
+						<input type="checkbox" name="desired-outcome" value='eco-tourism'>Develop ecotourism</input><br>
+						<input type="checkbox" name="desired-outcome" value='increase-awarness'>Increase community awareness</input><br>
+						<input type="checkbox" name="desired-outcome" value='grants/funding'>Access grants/funding</input><br>
+					</fieldset>
+				</div>
+				<div id='dropdown-container' class='flex-container'>
+					<select name="budget-filter" id="budget-filter" class='filter'>
+						<option value='' disabled selected hidden>Budget</option>
+						<option value="low">Low</option>
+						<option value='medium'>Medium</option>
+						<option value='high'>High</option>
+						<option value='extreme'>Extreme</option>
+					</select>
+					<select name="tech-filter" id="tech-filter" class='filter'>
+						<option value='' disabled selected hidden>Technical skills required</option>
+						<option value='no-skills'>No special skills required</option>
+						<option value='some-skills'>Some technical skills required</option>
+						<option value='ongoing-skills'>Ongoing technical support required</option>
+						<option value='dedicated-skills'>Dedicated technical staff required</option>
+					</select>
+					<select name="env-filter" id="env-filter" class='filter'>
+						<option value='' disabled selected hidden>Environmental impact</option>
+						<option value='low-impact'>Low impact</option>
+						<option value='hazard-chem'>Hazerdous chemicals involved</option>
+						<option value='harmful-waste'>Harmful waste produced</option>
+						<option value='high-energy'>High energy/resource input</option>
+						<option value='water-impact'>Impacts water quality</option>
+					</select>
+					<select name="climate-filter" id="climate-filter" class='filter'>
+						<option value='' disabled selected hidden>Climate</option>
+						<option value='arid'>Arid</option>
+						<option value='high-elevation'>High elevation</option>
+						<option value='tropical'>Tropical</option>
+						<option value='coastal'>Coastal</option>
+						<option value='flood-prone'>Flood prone</option>
+						<option value='freezing-temps'>Freezing temperatures</option>
+					</select>
+				</div>
 			</div>
 			<div id='submit-container' class='flex-container'>
 				<button id='search-submit' type="button">Submit search</button>
